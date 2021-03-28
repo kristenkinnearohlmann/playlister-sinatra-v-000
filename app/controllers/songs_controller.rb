@@ -67,7 +67,12 @@ class SongsController < ApplicationController
       end
     end
 
-    # reset genres
+    # confirm genres included in hash
+    if !params[:song].keys.includ?("genres")
+      params[:song][:genres] = []
+    end
+
+    
     binding.pry
 
     song.artist = artist

@@ -72,7 +72,10 @@ class SongsController < ApplicationController
       params[:song][:genres] = []
     end
 
-
+    # Get Genre objects for selected genres
+    genres = params[:song][:genres]
+    genres.map! {|genre| Genre.find(genre)}
+    
     binding.pry
 
     song.artist = artist

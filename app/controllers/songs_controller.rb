@@ -35,6 +35,8 @@ class SongsController < ApplicationController
     song.artist = artist
     song.save
 
+    # flash message
+
     redirect "/songs/#{song.slug}"
   end
 

@@ -35,6 +35,6 @@ class SongsController < ApplicationController
     @genres = @song.genres
 
     erb :'songs/show'
-  
+
   end
 end

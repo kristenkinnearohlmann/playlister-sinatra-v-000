@@ -19,6 +19,7 @@ class SongsController < ApplicationController
     end
 
     genres = params[:song][:genres]
+    genres.map! {|genre| Genre.find(genre)}
     binding.pry
 
     song.artist = artist

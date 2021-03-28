@@ -72,7 +72,7 @@ class SongsController < ApplicationController
       params[:song][:genres] = []
     end
 
-    
+
     binding.pry
 
     song.artist = artist

@@ -8,9 +8,6 @@
   </p>
   <p>
     <% song_genres = @song.genres.map {|genre| genre}  %>
-    <% song_genres.each do |genre| %>
-      genre<br>
-    <% end %>
     Genres: <br>
     <% Genre.all.each do |genre| %>
         <input type="checkbox" id="<%= genre.name %>" name="song[genres][]" value="<%= genre.id %>" <%= 'checked' if song_genres.include?(genre) %>><%= genre.name %>

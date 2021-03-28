@@ -7,7 +7,7 @@
     <input type="text" id="artist_name" name="song[artist]" value="<%= @song.artist.name %>">
   </p>
   <p>
-    <% song_genres = @song.genres.map {|genre| genre.name}  %>
+    <% song_genres = @song.genres.map {|genre| genre}  %>
     <% song_genres.each do |genre| %>
       genre<br>
     <% end %>

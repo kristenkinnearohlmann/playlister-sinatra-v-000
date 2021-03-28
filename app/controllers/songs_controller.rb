@@ -18,6 +18,9 @@ class SongsController < ApplicationController
       end
     end
 
+    genres = params[:song][:genres]
+    binding.pry
+
     song.artist = artist
     song.save
 

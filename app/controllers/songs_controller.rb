@@ -8,7 +8,10 @@ class SongsController < ApplicationController
 
   post '/songs' do
 
+    # Create new song
     song = Song.create(name: params[:song][:name])
+
+    # Create or find artist
     if !params[:song][:artist].empty?
       artist = Artist.new(name: params[:song][:artist])
       if Artist.find_by_slug(artist.slug)

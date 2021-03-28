@@ -36,7 +36,7 @@ class SongsController < ApplicationController
     song.save
 
     # flash message
-
+    flash[:message] = ""
     redirect "/songs/#{song.slug}"
   end
 

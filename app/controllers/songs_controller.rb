@@ -55,7 +55,7 @@ class SongsController < ApplicationController
   end
 
   patch '/songs/:slug' do
-
+    binding.pry
     redirect "/songs/#{song.slug}"
   end
 

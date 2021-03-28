@@ -56,7 +56,7 @@ class SongsController < ApplicationController
 
   patch '/songs/:slug' do
     song = Song.find_by_slug(params[:slug])
-    binding.pry
+
     # Create or find artist
     if !params[:song][:artist].empty?
       artist = Artist.new(name: params[:song][:artist])
@@ -67,6 +67,7 @@ class SongsController < ApplicationController
       end
     end
 
+    song.artist = artist
     binding.pry
     redirect "/songs/#{song.slug}"
   end

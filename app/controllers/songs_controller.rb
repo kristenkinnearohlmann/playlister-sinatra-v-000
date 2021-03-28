@@ -25,6 +25,7 @@ class SongsController < ApplicationController
     genres = params[:song][:genres]
     genres.map! {|genre| Genre.find(genre)}
 
+    # Add genres and artist to song and save
     song.genres = genres
     song.artist = artist
     song.save

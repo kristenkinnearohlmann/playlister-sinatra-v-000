@@ -11,7 +11,7 @@
     <% Genre.all.each do |genre| %>
       <% song_genres = @song.genres.map {|genre| genre.name}  %>
       <% song_genres.each do |genre| %>
-        <%= genre.name %><br>
+        <%= genre %><br>
       <% end %>
     <% end %>
   </p>

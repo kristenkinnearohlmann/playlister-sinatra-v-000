@@ -6,5 +6,12 @@
     <label for="artist_name">Artist Name </label>
     <input type="text" id="artist_name" name="song[artist]" value="<%= @song.artist.name %>">
   </p>
+  <p>
+    Genres: <br>
+    <% Genre.all.each do |genre| %>
+      <% song_genres = @song.genres.map! {|genre| genre.name}  %>
+      <input type="checkbox" id="<%= genre.name %>" name="song[genres][]" value="<%= genre.id %>" <%= 'checked' if song_genres.include? %>><%= genre.name %>
+    <% end %>
+  </p>
   <input type="submit" name="Save">
 </form>

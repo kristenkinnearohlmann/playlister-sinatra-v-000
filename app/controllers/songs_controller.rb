@@ -68,7 +68,7 @@ class SongsController < ApplicationController
     end
 
     song.artist = artist
-    binding.pry
+
     redirect "/songs/#{song.slug}"
   end
 

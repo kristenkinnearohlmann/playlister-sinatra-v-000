@@ -4,7 +4,7 @@
   <input type="hidden" id="hidden" name="_method" value="PATCH">
   <p>
     <label for="artist_name">Artist Name </label>
-    <input type="text" id="artist_name" name="song[artist]" value="<%= @song.artist %>">
+    <input type="text" id="artist_name" name="song[artist]" value="<%= @song.artist.name %>">
   </p>
   <input type="submit" name="Save">
 </form>

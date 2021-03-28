@@ -21,6 +21,7 @@ class SongsController < ApplicationController
       end
     end
 
+    # Get Genre objects for selected genres
     genres = params[:song][:genres]
     genres.map! {|genre| Genre.find(genre)}
 

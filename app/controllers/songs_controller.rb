@@ -68,7 +68,7 @@ class SongsController < ApplicationController
     end
 
     # confirm genres included in hash
-    if !params[:song].keys.includ?("genres")
+    if !params[:song].keys.include?("genres")
       params[:song][:genres] = []
     end
 

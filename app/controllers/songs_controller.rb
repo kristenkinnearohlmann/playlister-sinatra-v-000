@@ -67,6 +67,9 @@ class SongsController < ApplicationController
       end
     end
 
+    # reset genres
+    binding.pry
+
     song.artist = artist
     song.save
 
